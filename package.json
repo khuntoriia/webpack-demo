@@ -1,0 +1,27 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "学习wepack使用，按照官网教程练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khuntoriia/webpack-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khuntoriia/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/khuntoriia/webpack-demo#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0"
+  }
+}
