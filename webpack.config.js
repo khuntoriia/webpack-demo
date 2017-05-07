@@ -6,7 +6,9 @@ var path = require('path');
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
-  entry:['./file1.js','./file3.js'],
+  entry:{
+    home:"./file1.js"
+  },
   output:{
     path:path.resolve(__dirname,'./dist'),
     filename:"bundle.js"
