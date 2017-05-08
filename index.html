@@ -4,8 +4,43 @@
   <meta charset="UTF-8">
   <title>webpack</title>
 </head>
-<script type="text/javascript" src="./dist/bundle.js"></script>
-<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script id="manifest"></script>
+<script id="vender"></script>
+<script id="home"></script>
+<script>
+  //<![CDATA[
+  window.webpackManifest = {"0":"vender.3351b90f003fc69e2146.js","1":"home.20978077f23946959df5.js"}
+  //]]>
+</script>
+<!--<script type="text/javascript" src="./dist/manifest.f7a4e996f27786d63633.bundle.js"></script>-->
+<!--<script type="text/javascript" src="./dist/vender.79f600d4a3e10716db76.bundle.js"></script>-->
+<!--<script type="text/javascript" src="./dist/home.4374a9f63e52ded20917.bundle.js"></script>-->
+
+<script>
+//  $(function(){
+    $.ajaxSetup({
+      cache:true
+    });
+    $.getJSON("./dist/manifest.json",function(data){
+      var home = data['home.js'];
+      var vender = data['vender.js'];
+      var manifest = data['manifest.js'];
+      console.log(home);
+      $("#manifest").attr("src","./dist/"+manifest);
+      $("#vender").attr("src","./dist/"+vender);
+      $("#home").attr("src","./dist/"+home);
+//      $.getScript("./dist/manifest.9b9b578b86a2c60ef017.bundle.js",function(){
+//        $.getScript("./dist/"+vender,function(){
+//          $.getScript("./dist/"+home);
+//        });
+//      });
+
+
+
+    })
+//  })
+</script>
 <body>
 
 </body>
